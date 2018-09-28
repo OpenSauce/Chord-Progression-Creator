@@ -1,13 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Chord Progression Creator</h1>
-    <script src="progression.js"></script>
-</body>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css">
+		<title>Leigh Lawley - Portfolio</title>
+	</head>
+	<body>
+		<div id="eminem">
+			<div id="titleheader">
+				<div id="title">
+					Leigh Peter Lawley<br />
+				</div>
+				<div id="subtitle">
+					Portfolio
+				</div>
+			</div>
+			<div class="line"></div>
+			<div id="links">
+				<ul>
+					<li class="currentLink">Chord Progression</li>
+				</ul>
+			</div>
+			<div class="line"></div>
+			<div id="content">
+				<h1>Chord Progression Generator</h1>
+				<div class="selectBoxes">
+				<div class="custom-select" style="width:200px;">
+					<select id="noteSelect">
+						<option>Choose a number</option>
+					</select>
+				</div>
+				
+				<div class="custom-select" style="width:200px;">
+				<select id="keySelect">
+					<option>Choose a Key</option>
+				</select>
+				</div>
+				<button class="button" type="button" onclick="createProgression()" style="width:200px;">Generate!</button>
+				</div>
+				<div class="result" id="result">
+				
+				</div>
+				<script src="progression.js"></script>
+			</div>
+			<div id="push"></div>
+		</div>
+		<div id="footer">Leigh Lawley &#9426; 2018</div>
+	</body>
 </html>

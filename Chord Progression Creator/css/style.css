@@ -1,0 +1,267 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body, div, span, applet, object, iframe,
+ h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a {
+	color: #5F89FD;
+}
+
+body {
+	line-height: 1;
+	background-color: 60B4CA;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: #D1AB97;
+}
+
+p {
+	padding-bottom: 10px;
+}
+
+h1 {
+	border-radius: 5px 5px 5px 5px;
+	border: 2px solid #60B4CA;
+	background-color: 585B64;
+	font-size: 22px;
+	font-weight: normal;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	color: #FD7D5F;
+}
+
+h2{
+	font-size: 18px;
+	font-weight: normal;
+	color: #FD7D5F;
+}
+
+#titleheader {
+	background-image: url(../img/titlebg.png);
+	margin: 5px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#title {
+	font-family: 'Open Sans', sans-serif;
+	color: #000000;
+	width: auto;
+	font-size: 38px;
+	padding-top: 10px;
+	padding-right: 1%;
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+#subtitle {
+	font-family: 'Open Sans', sans-serif;
+	color: #FD7D5F;
+	font-size: 32px;
+	padding-right: 1%;
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+#links {
+	font-size: 105%;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 1%;
+	min-width: 500px;
+	width: auto;
+}
+	#links > ul > li {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	#links > ul > li:not(:first-child):before{
+		content: "|";
+		padding-right: 10px;
+		color: #D1AB97 !important;
+		font-weight: normal !important;
+	}
+		#links > ul > li > a{
+			color: #585B64;
+			text-decoration: none;
+		}
+		#links > ul > li > a:hover{
+			color: #D1AB97;
+		}
+.line {
+	height: 2px;
+	min-width: 500px;
+	margin-left: 1%;
+	background: #60B4CA; /* Old browsers */
+	background: -moz-linear-gradient(left, #000000 0%, #60B4CA 35%, #ffffff 50%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(25%,#60B4CA), color-stop(75%,#FD7D5F), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#60B4CA 25%,#60B4CA 75%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ffffff 0%,#60B4CA 25%,#FD7D5F 75%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ffffff 0%,#60B4CA 25%,#FD7D5F 75%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(left,  #ffffff 0%,#60B4CA 25%,#FD7D5F 75%,#ffffff 100%); /* W3C */
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: 60B4CA;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: 585B64;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rightheader {
+	text-align: right;
+}
+
+.currentLink {
+	font-weight: bold;
+	color: #FD7D5F;
+}
+
+.selectBoxes {
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 10px;
+}
+
+.button {
+	transition-duration: 0.2s;
+    background-color: #FD7D5F; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: white; /* Green */
+    color: #FD7D5F;
+	border: 2px solid #FD7D5F;
+}
+
+#eminem {
+	border-radius: 15px 15px 0px 0px;
+	border: 2px solid #000000;
+	max-width: 1100px;
+	width: 100%;
+	background-color: #ffffff;
+	padding-left: 2%;
+	padding-right: 2%;
+	min-height: 50%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -21px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#content {
+	font-size: 16px;
+	width: 94%;
+	margin-top: 10px;
+	padding-bottom: 2%;
+	padding-left: 3%;
+	padding-right: 3%;
+	line-height: 150%;
+	text-align: left;
+	color:#585B64;
+}
+#footer, #push {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	width: 100%;
+	height: 21px;
+	text-align: center;
+}
